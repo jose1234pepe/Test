@@ -1,0 +1,83 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="Style Sheet.css" rel="stylesheet">
+        <link href="Function.js" rel="js">
+        <title>My First Web Page</title>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="Function.js"></script>
+        <script
+        src="https://code.jquery.com/jquery-3.7.1.min.js"
+        integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
+        crossorigin="anonymous"></script>
+        <script src="JSON.json"></script>
+    <script>
+        $(document).ready(function() {
+          $('.hoverover').hover(
+            function() {
+              $('.hover-image', this).toggle();
+              $('.default-image', this).toggle();
+            });});
+      </script>
+      <script>
+        var jsonData = {
+            company: "Brenda's Cozy Stitches",
+            location: "123 Main St, Cityville",
+            phone: "(555) 123-4567"
+        };
+
+        var jsonString = JSON.stringify(jsonData);
+
+        console.log(jsonString);
+    </script>
+</head>
+<body>
+    <header>
+        <div class="Top_Flex">
+            <div class="TT">
+                <button class="UButton" onclick="window.location.href='index.html'" style="float:left;">
+                Home Page
+                </button>
+            </div>
+            <div class="TT">
+                <h1>Contact</h1>
+            </div>
+            <div class="TT">
+                <img src="LOGO.png" style="height:80px; width: 80px;">
+            </div>
+        </div>
+    </header>
+    <main>
+        <div class="flex-container">
+            <div class="hoverover">
+            <img src="Black Tomato grab.png" alt="Image" class="left-image">
+            <img src="Black Tomato Picking.png" alt="image2" class="hover-image">
+            </div>
+            <div class="text-right">
+                <br><br><br><p style="font-size: 2rem;">Phone: (XXX)-XXX-XXXX<br><br>Email:XXXXXXXX@XXXXXXX.com</p>
+            </div>
+        </div>
+        <center>
+            <img src="Screenshot 2024-01-30 213259 - Copy.png">
+        </center>
+        <form action="send_message.php" method="post">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+        
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+        
+            <label for="message">Your Message:</label>
+            <textarea id="message" name="comment" cols="20" rows="3" required></textarea>
+            <input type="submit" value="Deliver Message" >
+        </form>
+    </main>
+    <footer>
+        <button class="UButton">
+            Contact
+        </button>
+    </footer>
+</body>
+</html>

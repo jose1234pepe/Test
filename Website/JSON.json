@@ -1,0 +1,9 @@
+{
+    "trigger": {
+      "subject": "Form Submission",
+      "sender": "*"
+    },
+    "reply": {
+      "subject": "Thank you for your submission",
+      "message": "Hello {{name}},\n\nThank you for filling out our form. We have received your information and will get back to you soon.\n\nBest regards,\nBing"
+    }}
